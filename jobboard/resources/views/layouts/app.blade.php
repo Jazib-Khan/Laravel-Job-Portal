@@ -39,7 +39,7 @@
 
             <nav class="mx-auto site-navigation">
                 <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li style="padding-left: 544px;"><a href="index.html" class="nav-link active">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 
                 <li><a href="profile.html">Profile</a></li>
@@ -48,10 +48,10 @@
                 <li class="d-lg-none"><a href="post-job.html"><span class="mr-2">+</span> Post a Job</a></li>
                 @guest
                     @if (Route::has('login'))
-                        <li class="d-lg-none"><a href="login.html">Log In</a></li>
+                        <li class=""><a href="{{ route('login') }}">Log In</a></li>
                     @endif
                     @if (Route::has('register'))
-                        <li class="d-lg-none"><a href="register.html">Register</a></li>
+                        <li class=""><a href="{{ route('register') }}">Register</a></li>
                     @endif
                 @else
                     <li class="nav-item dropdown">
