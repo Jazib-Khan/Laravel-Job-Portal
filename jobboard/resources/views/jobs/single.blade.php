@@ -63,8 +63,18 @@
 
         <div class="row mb-5">
             <div class="col-6">
-            <button class="btn btn-block btn-light btn-md"><i class="icon-heart"></i>Save Job</button>
-            <!--add text-danger to it to make it read-->
+                <form action="{{ route('save.job') }}" method="POST">
+                    @csrf
+                    <input name="job_id" type="text" value="{{ $job->id }}">
+                    <input name="user_id" type="text" value="{{ Auth::user()->id }}">
+                    <input name="job_image" type="text" value="{{ $job->image }}">
+                    <input name="job_title" type="text" value="{{ $job->job_title }}">
+                    <input name="job_region" type="text" value="{{ $job->job_region }}">
+                    <input name="job_type" type="text" value="{{ $job->job_type }}">
+                    <input name="company" type="text" value="{{ $job->company }}">
+                
+                    <button name="submit" type="submit" class="btn btn-block btn-light btn-md"><i class="icon-heart"></i>Save Job</button>
+                </form>
             </div>
             <div class="col-6">
             <button class="btn btn-block btn-primary btn-md">Apply Now</button>
