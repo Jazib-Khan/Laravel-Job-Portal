@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Jobs;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Job\Job;
+use App\Models\Category\Category;
 use App\Models\Job\JobSaved;
 use App\Models\Job\Application;
 use Auth;
@@ -33,13 +34,16 @@ class JobsController extends Controller
         ->where('user_id', Auth::user()->id)
         ->count();
 
-        //verify if user has applied for the job
+        // verify if user has applied for the job
 
         $appliedJob = Application::where('user_id', Auth::user()->id)
         ->where('job_id', $id)
         ->count();
 
-        return view('jobs.single', compact('job', 'relatedJobs', 'relatedJobsCount', 'savedJob', 'appliedJob'));
+        // categories 
+        $categories = Category::all();
+
+        return view('jobs.single', compact('job', 'relatedJobs', 'relatedJobsCount', 'savedJob', 'appliedJob','categories'));
     }
 
     public function saveJob(Request $request) {

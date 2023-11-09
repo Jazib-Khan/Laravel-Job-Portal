@@ -123,19 +123,19 @@
             </form>
             </div>
         </div>
-
         </div>
+
         <div class="col-lg-4">
         <div class="bg-light p-3 border rounded mb-4">
             <h3 class="text-primary  mt-3 h5 pl-3 mb-3 ">Job Summary</h3>
             <ul class="list-unstyled pl-3 mb-0">
-            <li class="mb-2"><strong class="text-black">Published on:</strong> {{ $job->created_at }}</li>
-            <li class="mb-2"><strong class="text-black">Vacancy:</strong> {{ $job->vacancy }}</li>
-            <li class="mb-2"><strong class="text-black">Employment Status:</strong> {{ $job->job_type }}</li>
-            <li class="mb-2"><strong class="text-black">Experience:</strong> {{ $job->experience }}</li>
-            <li class="mb-2"><strong class="text-black">Job Location:</strong> {{ $job->job_region }} </li>
-            <li class="mb-2"><strong class="text-black">Salary:</strong> {{ $job->salary }}</li>
-            <li class="mb-2"><strong class="text-black">Application Deadline:</strong> {{ $job->application_deadline }}</li>
+                <li class="mb-2"><strong class="text-black">Published on:</strong> {{ $job->created_at }}</li>
+                <li class="mb-2"><strong class="text-black">Vacancy:</strong> {{ $job->vacancy }}</li>
+                <li class="mb-2"><strong class="text-black">Employment Status:</strong> {{ $job->job_type }}</li>
+                <li class="mb-2"><strong class="text-black">Experience:</strong> {{ $job->experience }}</li>
+                <li class="mb-2"><strong class="text-black">Job Location:</strong> {{ $job->job_region }} </li>
+                <li class="mb-2"><strong class="text-black">Salary:</strong> {{ $job->salary }}</li>
+                <li class="mb-2"><strong class="text-black">Application Deadline:</strong> {{ $job->application_deadline }}</li>
             </ul>
         </div>
 
@@ -146,6 +146,16 @@
             <a href="https://twitter.com/intent/tweet?text={{ $job->job_title }}&url={{ route('single.job', $job->id) }}" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-twitter"></span></a>
             <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ route('single.job', $job->id) }}" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-linkedin"></span></a>
             </div>
+        </div>
+
+        <div class="bg-light p-3 border mt-4 rounded mb-4">
+            <h3 class="text-primary  mt-3 h5 pl-3 mb-3 ">Categories</h3>
+            <ul class="list-unstyled pl-3 mb-0">
+                @foreach ($categories as $category)
+                    <li class="mb-2"><a href="#">{{ $category->name }}</a></li>
+
+                @endforeach
+            </ul>
         </div>
 
         </div>
