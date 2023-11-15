@@ -7,11 +7,11 @@
     <div class="container">
     <div class="row">
         <div class="col-md-7">
-        <h1 class="text-white font-weight-bold">Applications</h1>
+        <h1 class="text-white font-weight-bold">Saved Jobs</h1>
         <div class="custom-breadcrumbs">
             <a href="#">Home</a> <span class="mx-2 slash">/</span>
             <a href="#">Job</a> <span class="mx-2 slash">/</span>
-            <span class="text-white"><strong>Applications</strong></span>
+            <span class="text-white"><strong>Saved Jobs</strong></span>
         </div>
         </div>
     </div>
@@ -23,13 +23,13 @@
 
 <div class="row mb-5 justify-content-center">
     <div class="col-md-7 text-center">
-    <h2 class="section-title mb-2">Applications</h2>
+    <h2 class="section-title mb-2">Saved Jobs</h2>
     </div>
 </div>
 
 <ul class="job-listings mb-5">
-    @if ($applications->count() > 0)
-        @foreach ($applications as $job)
+    @if ($savedJobs->count() > 0)
+        @foreach ($savedJobs as $job)
             <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
                 <a href="{{ route('single.job', $job->id) }}"></a>
                 <div class="job-listing-logo">
@@ -55,7 +55,7 @@
 
     <div class="container">
         <div class="alert alert-success">
-            <p>No applications just yet</p>
+            <p>No saved jobs just yet</p>
         </div>
     </div>
 
