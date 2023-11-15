@@ -63,6 +63,10 @@
                             <a class="dropdown-item" href="{{ route('profile') }}">
                                 Profile
                             </a>
+
+                            <a class="dropdown-item" href="{{ route('applications') }}">
+                                Applications
+                            </a>
                             
                             <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();

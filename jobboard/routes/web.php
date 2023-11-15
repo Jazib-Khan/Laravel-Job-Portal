@@ -32,3 +32,6 @@ Route::get('/categories/single/{name}', [App\Http\Controllers\Categories\Categor
 
 Route::get('/users/profile', [App\Http\Controllers\Users\UsersController::class, 'profile'])->name('profile');
 
+Route::get('/users/applications', [App\Http\Controllers\Users\UsersController::class, 'applications'])->name('applications');
+
+
