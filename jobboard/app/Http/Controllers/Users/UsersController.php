@@ -58,4 +58,30 @@ class UsersController extends Controller
             
         }
     }
+
+    public function editCV (){
+
+        return view('users.editcv');
+    }
+
+    public function updateCV(Request $request) {
+
+
+        $OldCV = User::find(Auth::user()->id);
+
+        $file_path = public_path('assets/cvs/'.$OldCV->cv);
+        unlink($file_path);
+
+
+        $destinationPath = "assets/cvs/";
+        $mycv = $request->cv->getClientOriginalName();
+        $request->cv->move(public_path($destinationPath), $mycv);
+
+        $OldCV->update([
+            "cv" => $mycv 
+        ]);
+
+        return redirect('/users/profile')->with('update', 'CV updated successfully');
+
+    }
 }
