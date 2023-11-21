@@ -43,14 +43,14 @@
             <option>Anywhere</option>
             <option>London, Central</option>
             <option>Manchester</option>
-            <option>San Francisco</option>
-            <option>Palo Alto</option>
-            <option>New York</option>
-            <option>Manhattan</option>
-            <option>Ontario</option>
-            <option>Toronto</option>
-            <option>Kansas</option>
-            <option>Mountain View</option>
+            <option>Birmingham</option>
+            <option>Stoke-On-Trent</option>
+            <option>Liverpool</option>
+            <option>Nottingham</option>
+            <option>Bristol</option>
+            <option>Plymouth</option>
+            <option>Surrey</option>
+            <option>Reading</option>
             </select>
         </div>
         <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
@@ -67,9 +67,11 @@
         <div class="col-md-12 popular-keywords">
             <h3>Trending Keywords:</h3>
             <ul class="keywords list-unstyled m-0 p-0">
-            <li><a href="#" class="">UI Designer</a></li>
-            <li><a href="#" class="">Python</a></li>
-            <li><a href="#" class="">Developer</a></li>
+            
+            @foreach ($duplicates as $duplicate)
+                <li><a href="#" class="">{{ $duplicate->keyword }}</a></li>
+            @endforeach
+            
             </ul>
         </div>
         </div>
