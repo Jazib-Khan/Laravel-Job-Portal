@@ -24,7 +24,7 @@
     @auth('admin')
         <ul class="navbar-nav side-nav" >
             <li class="nav-item">
-            <a class="nav-link text-white" style="margin-left: 20px;" href="index.html">Home
+            <a class="nav-link text-white" style="margin-left: 20px;" href="{{ route('admins.dashboard') }}">Home
                 <span class="sr-only">(current)</span>
             </a>
             </li>
@@ -45,7 +45,7 @@
     <ul class="navbar-nav ml-md-auto d-md-flex">
         @auth('admin')
             <li class="nav-item">
-            <a class="nav-link" href="index.html">Home
+            <a class="nav-link" href="{{ route('admins.dashboard') }}">Home
                 <span class="sr-only">(current)</span>
             </a>
             </li>
@@ -65,7 +65,7 @@
             </li>
             @else
                 <li class="nav-item">
-                    <a class="nav-link" href="admins/login-admins.html">login
+                    <a class="nav-link" href="{{ route('view.login') }}">login
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>            
