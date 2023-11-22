@@ -61,6 +61,9 @@ Route::group(['prefix' => 'users'], function(){
 
 });
 
+Route::get('admin/login', [App\Http\Controllers\Admins\AdminsController::class, 'viewLogin'])->name('view.login');
+
+
 
 
 
