@@ -32,7 +32,7 @@
             <a class="nav-link" href="{{ route('view.admins') }}" style="margin-left: 20px;">Admins</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="categories-admins/show-categories.html" style="margin-left: 20px;">Categories</a>
+            <a class="nav-link" href="{{ route('display.categories') }}" style="margin-left: 20px;">Categories</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="jobs-admins/show-jobs.html" style="margin-left: 20px;">Jobs</a>
