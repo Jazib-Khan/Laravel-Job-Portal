@@ -29,7 +29,7 @@
             </a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="admins/admins.html" style="margin-left: 20px;">Admins</a>
+            <a class="nav-link" href="{{ route('view.admins') }}" style="margin-left: 20px;">Admins</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="categories-admins/show-categories.html" style="margin-left: 20px;">Categories</a>
