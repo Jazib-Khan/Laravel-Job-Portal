@@ -51,5 +51,12 @@ class AdminsController extends Controller
 
     }
 
+    public function createAdmins() {
+
+
+            
+        return view('admins.create-admins');
+    }
+
 
 }
