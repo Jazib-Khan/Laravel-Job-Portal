@@ -8,6 +8,7 @@ use App\Models\Admin\Admin;
 use App\Models\Job\Job;
 use App\Models\Category\Category;
 use App\Models\Job\Application;
+use Illuminate\Support\Facades\Hash;
 
 class AdminsController extends Controller
 {
@@ -52,11 +53,25 @@ class AdminsController extends Controller
     }
 
     public function createAdmins() {
-
-
             
         return view('admins.create-admins');
     }
 
+    public function storeAdmins(Request $request) {
+
+        $createAdmin = Admin::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+
+        if ($createAdmin) {
+            return redirect('admin/all-admins/')->with('create', 'Admin Created Successfully');
+            
+        }
+
+        return view('admins.create-admins', compact('createAdmin'));
+
+    }
 
 }
