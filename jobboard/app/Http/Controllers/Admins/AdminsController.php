@@ -144,4 +144,11 @@ class AdminsController extends Controller
         }
     }
 
+    public function allJobs() {
+
+        $jobs = Job::all();
+
+        return view('admins.display-jobs', compact('jobs'));
+    }
+
 }
