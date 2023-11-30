@@ -153,8 +153,9 @@ class AdminsController extends Controller
 
     public function createJobs() {
 
+        $categories = Category::all();
 
-        return view('admins.create-jobs');
+        return view('admins.create-jobs', compact('categories'));
     }
 
     public function storeJobs(Request $request){
@@ -194,8 +195,8 @@ class AdminsController extends Controller
             'responsibilities' => $request->responsibilities,
             'education_experience' => $request->education_experience,
             'other_benefits' => $request->other_benefits,
-            'category' => $request->category,
             'image' => $myimage,
+            'category' => $request->category,
 
             
         ]);
