@@ -21,14 +21,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                <th scope="row">1</th>
-                <td>job one</td>
-                <td>development</td>
-                <td>microsoft</td>
-                <td>New York</td>
-                    <td><a href="#" class="btn btn-danger  text-center ">delete</a></td>
-                </tr>
+                @foreach($jobs as $job)
+                    <tr>
+                        <th scope="row">1</th>
+                            <td>{{ $job->job_title }}</td>
+                            <td>{{ $job->category }}</td>
+                            <td>{{ $job->company }}</td>
+                            <td>{{ $job->job_region }}</td>
+                            <td><a href="#" class="btn btn-danger  text-center ">delete</a></td>
+                    </tr>
+                @endforeach
                 
             </tbody>
             </table> 
