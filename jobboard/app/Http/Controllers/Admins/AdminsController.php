@@ -151,4 +151,60 @@ class AdminsController extends Controller
         return view('admins.display-jobs', compact('jobs'));
     }
 
+    public function createJobs() {
+
+
+        return view('admins.create-jobs');
+    }
+
+    public function storeJobs(Request $request){
+
+        /*Request()->validate([
+            'job_title' => 'required|max:40',
+            'job_region' => 'required|max:40',
+            'company' => 'required|max:40',
+            'job_type' => 'required|max:40',
+            'vacancy' => 'required|max:40',
+            'experience' => 'required|max:40',
+            'salary' => 'required|max:40',
+            'application_deadline' => 'required|max:40',
+            'job_description' => 'required|max:40',
+            'responsibilities' => 'required|max:40',
+            'education_experience' => 'required|max:40',
+            'other_benefits' => 'required|max:40',
+            'category' => 'required|max:40',
+            'image' => 'required',
+            
+        ]);*/
+
+        $destinationPath = "assets/images/";
+        $myimage = $request->image->getClientOriginalName();
+        $request->image->move(public_path($destinationPath), $myimage);
+
+        $createJob = Job::create([
+            'job_title' => $request->job_title,
+            'job_region' => $request->job_region,
+            'company' => $request->company,
+            'job_type' => $request->job_type,
+            'vacancy' => $request->vacancy,
+            'experience' => $request->experience,
+            'salary' => $request->salary,
+            'application_deadline' => $request->application_deadline,
+            'job_description' => $request->job_description,
+            'responsibilities' => $request->responsibilities,
+            'education_experience' => $request->education_experience,
+            'other_benefits' => $request->other_benefits,
+            'category' => $request->category,
+            'image' => $myimage,
+
+            
+        ]);
+
+        if ($createJob) {
+            return redirect('admin/display-jobs/')->with('create', 'Job Created Successfully');
+            
+        }
+
+    }
+
 }
