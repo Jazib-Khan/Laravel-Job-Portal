@@ -11,6 +11,11 @@
                     <p>{!! \Session::get('create') !!}</p>
                 </div>
             @endif
+            @if (\Session::has('update'))
+                <div class="alert alert-success">
+                    <p>{!! \Session::get('update') !!}</p>
+                </div>
+            @endif
             <h5 class="card-title mb-4 d-inline">Categories</h5>
             <a href="{{ route('create.categories') }}" class="btn btn-primary mb-4 text-center float-right">Create Categories</a>
             <table class="table">
@@ -26,8 +31,8 @@
                 @foreach($categories as $category)
                     <tr>
                         <th scope="row">{{ $category->id }}</th>
-                        <td>{{$category->name}}</td>
-                        <td><a  href="#" class="btn btn-warning text-white text-center ">Update </a></td>
+                        <td>{{ $category->name }}</td>
+                        <td><a  href="{{ route('edit.categories', $category->id) }}" class="btn btn-warning text-white text-center ">Update </a></td>
                         <td><a href="#" class="btn btn-danger  text-center ">Delete </a></td>
                     </tr>
                 @endforeach
