@@ -8,7 +8,7 @@
         <div class="card-body">
             <h5 class="card-title mb-4 d-inline">Create Jobs</h5>
         
-            <form class="p-4 p-md-5" action="{{ route('store.jobs') }}" method="post">
+            <form class="p-4 p-md-5" action="{{ route('store.jobs') }}" method="post" enctype="multipart/form-data">
         
             <!--job details-->
             
