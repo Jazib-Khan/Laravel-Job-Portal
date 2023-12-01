@@ -12,6 +12,12 @@
                 </div>
             @endif
 
+            @if (\Session::has('create'))
+                <div class="alert alert-success">
+                    <p>{!! \Session::get('delete') !!}</p>
+                </div>
+            @endif
+
             <h5 class="card-title mb-4 d-inline">Jobs</h5>
             <a  href="{{ route('create.jobs') }}" class="btn btn-primary mb-4 text-center float-right">Create Jobs</a>
             
@@ -34,7 +40,7 @@
                             <td>{{ $job->category }}</td>
                             <td>{{ $job->company }}</td>
                             <td>{{ $job->job_region }}</td>
-                            <td><a href="#" class="btn btn-danger  text-center ">delete</a></td>
+                            <td><a href="{{ route('delete.jobs', $job->id) }}" class="btn btn-danger  text-center ">delete</a></td>
                     </tr>
                 @endforeach
                 

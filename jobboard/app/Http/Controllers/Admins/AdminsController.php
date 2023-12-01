@@ -9,6 +9,7 @@ use App\Models\Job\Job;
 use App\Models\Category\Category;
 use App\Models\Job\Application;
 use Illuminate\Support\Facades\Hash;
+use File;
 
 class AdminsController extends Controller
 {
@@ -160,23 +161,23 @@ class AdminsController extends Controller
 
     public function storeJobs(Request $request){
 
-        /*Request()->validate([
+        Request()->validate([
             'job_title' => 'required|max:40',
             'job_region' => 'required|max:40',
             'company' => 'required|max:40',
             'job_type' => 'required|max:40',
             'vacancy' => 'required|max:40',
-            'experience' => 'required|max:40',
+            'experience' => 'required',
             'salary' => 'required|max:40',
             'application_deadline' => 'required|max:40',
-            'job_description' => 'required|max:40',
-            'responsibilities' => 'required|max:40',
+            'job_description' => 'required',
+            'responsibilities' => 'required',
             'education_experience' => 'required|max:40',
             'other_benefits' => 'required|max:40',
             'category' => 'required|max:40',
             'image' => 'required',
             
-        ]);*/
+        ]);
 
         $destinationPath = "assets/images/";
         $myimage = $request->image->getClientOriginalName();
@@ -208,4 +209,20 @@ class AdminsController extends Controller
 
     }
 
+    public function deleteJobs($id) {
+
+        $deleteJob = Job::where('id', $id)->delete();
+
+        if(File::exists(public_path('assets/images/'.$deleteJob->image))){
+
+            File::delete(public_path('assets/images/'.$deleteJob->image));
+        }else{
+            dd('File does not exists.');
+        }
+
+        if ($deleteJob) {
+            return redirect('admin/display-jobs/')->with('delete', 'Job Deleted Successfully');
+            
+        }
+    }
 }

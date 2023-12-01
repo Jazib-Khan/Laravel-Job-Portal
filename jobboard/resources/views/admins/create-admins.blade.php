@@ -15,21 +15,21 @@
                 <input type="email" name="email" id="form2Example1" class="form-control" placeholder="email" />
             </div>
             @if($errors->has('email'))
-                <p class="alert alert-success">{{ $errors->first('email') }}</p>
+                <p class="alert alert-danger">{{ $errors->first('email') }}</p>
             @endif
 
             <div class="form-outline mb-4">
                 <input type="text" name="name" id="form2Example1" class="form-control" placeholder="name" />
             </div>
             @if($errors->has('name'))
-                <p class="alert alert-success">{{ $errors->first('name') }}</p>
+                <p class="alert alert-danger">{{ $errors->first('name') }}</p>
             @endif
 
             <div class="form-outline mb-4">
                 <input type="password" name="password" id="form2Example1" class="form-control" placeholder="password" />
             </div>
             @if($errors->has('name'))
-                <p class="alert alert-success">{{ $errors->first('password') }}</p>
+                <p class="alert alert-danger">{{ $errors->first('password') }}</p>
             @endif
 
 
