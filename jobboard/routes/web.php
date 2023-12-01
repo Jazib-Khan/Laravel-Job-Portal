@@ -94,6 +94,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function(){
 
     Route::get('/delete-jobs/{id}', [App\Http\Controllers\Admins\AdminsController::class, 'deleteJobs'])->name('delete.jobs');
 
+    //applications
+    Route::get('/display-applications/', [App\Http\Controllers\Admins\AdminsController::class, 'allApplications'])->name('display.applications');
+
+    Route::get('/delete-applications/{id}', [App\Http\Controllers\Admins\AdminsController::class, 'deleteApplications'])->name('delete.applications');
+
+
 
 });
 

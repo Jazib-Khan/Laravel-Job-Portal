@@ -225,4 +225,20 @@ class AdminsController extends Controller
             
         }
     }
+
+    public function allApplications() {
+
+        $applications = Application::all();
+
+        return view('admins.display-applications', compact('applications'));
+    }
+
+    public function deleteApplications($id) {
+
+        $deleteApplication = Application::where('id', $id)->delete();
+
+        if ($deleteApplication) {
+            return redirect('admin/display-applications/')->with('delete', 'Application Deleted Successfully');
+        }
+    }
 }

@@ -86,6 +86,7 @@ class JobsController extends Controller
                 'cv' => Auth::user()->cv,
                 'job_id' => $request->job_id,
                 'user_id' => Auth::user()->id,
+                'email' => Auth::user()->email,
                 'job_image' => $request->job_image,
                 'job_title' => $request->job_title,
                 'job_region' => $request->job_region,
@@ -94,7 +95,7 @@ class JobsController extends Controller
             ]);
 
             if($applyJob) {
-                return redirect('/jobs/single/'.$request->job_id.'')->with('applied', 'job applied successfully');
+                return redirect('/jobs/single/'.$request->job_id.'')->with('applied', 'Job Applied Successfully');
             }
 
         }
