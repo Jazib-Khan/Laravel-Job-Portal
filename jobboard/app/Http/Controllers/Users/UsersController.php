@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Job\Application;
 use App\Models\Job\JobSaved;
 use Auth;
+use File;
 
 class UsersController extends Controller
 {
@@ -79,8 +80,12 @@ class UsersController extends Controller
 
         $OldCV = User::find(Auth::user()->id);
 
-        $file_path = public_path('assets/cvs/'.$OldCV->cv);
-        unlink($file_path);
+        if(File::exists(public_path('assets/cvs/'.$OldCV->cv))){
+
+            File::delete(public_path('assets/cvs/'.$OldCV->cv));
+        }else{
+            dd('File does not exists.');
+        }
 
 
         $destinationPath = "assets/cvs/";

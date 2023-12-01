@@ -28,7 +28,7 @@
 
 <div class="container">
     @if (\Session::has('apply'))
-    <div class="alert alert-success">
+    <div class="alert alert-danger">
         <p>{!! \Session::get('apply') !!}</p>
     </div>
     @endif

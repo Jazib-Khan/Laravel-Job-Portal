@@ -31,7 +31,7 @@
     @if ($applications->count() > 0)
         @foreach ($applications as $job)
             <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
-                <a href="{{ route('single.job', $job->id) }}"></a>
+                <a href="{{ route('single.job', $job->job_id) }}"></a>
                 <div class="job-listing-logo">
                     <img src="{{ asset('assets/images/' . $job->job_image . '') }}" alt="Free Website Template by Free-Template.co" class="img-fluid">
                 </div>
