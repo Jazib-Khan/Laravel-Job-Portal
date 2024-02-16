@@ -84,7 +84,7 @@ class UsersController extends Controller
 
             File::delete(public_path('assets/cvs/'.$OldCV->cv));
         }else{
-            dd('File does not exists.');
+            //dd('File does not exists.');
         }
 
 

@@ -69,7 +69,7 @@
                             </a>
 
                             <a class="dropdown-item" href="{{ route('edit.details') }}">
-                                Update details
+                                Update Details
                             </a>
 
                             <a class="dropdown-item" href="{{ route('edit.cv') }}">

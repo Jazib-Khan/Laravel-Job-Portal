@@ -85,7 +85,7 @@
         <div class="col-lg-6 mb-5 mb-lg-0 order-md-2">
         <a data-fancybox data-ratio="2" href="https://vimeo.com/317571768" class="block__96788">
             <span class="play-icon"><span class="icon-play"></span></span>
-            <img src="{{ asset('assets/images/sq_img_6.jpg') }}" alt="Image" class="img-fluid img-shadow">
+            <img src="{{ asset('assets/images/sq_img_7.jpg') }}" alt="Image" class="img-fluid img-shadow">
         </a>
         </div>
         <div class="col-lg-5 mr-auto order-md-1  mb-5 mb-lg-0">
@@ -109,11 +109,11 @@
     <div class="row align-items-center block__69944">
 
         <div class="col-md-6">
-        <img src="{{ asset('assets/images/person_5.jpg') }}" alt="Image" class="img-fluid mb-4 rounded">
+        <img src="{{ asset('assets/images/person_4.jpg') }}" alt="Image" class="img-fluid mb-4 rounded">
         </div>
 
         <div class="col-md-6">
-        <h3>Elisabeth Smith</h3>
+        <h3>Mark Baxter</h3>
         <p class="text-muted">Creative Director</p>
         <p>Soluta quasi cum delectus eum facilis recusandae nesciunt molestias accusantium libero dolores repellat id in dolorem laborum ad modi qui at quas dolorum voluptatem voluptatum repudiandae voluptatibus ut? Ex vel  ad explicabo iure ipsa possimus consectetur neque rem molestiae eligendi velit?.</p>
         <div class="social mt-4">

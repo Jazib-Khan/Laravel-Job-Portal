@@ -30,7 +30,7 @@
     <div class="col-md-12">
     <div class="mb-5 text-center">
         <h1 class="text-white font-weight-bold">The Easiest Way To Get Your Dream Job</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est, consequuntur perferendis.</p>
+        <p>Start looking for your job now</p>
     </div>
     <form method="post" action="{{ route('search.job') }}" class="search-jobs-form">
         @csrf
@@ -91,7 +91,7 @@
 <div class="row mb-5 justify-content-center">
     <div class="col-md-7 text-center">
     <h2 class="section-title mb-2 text-white">JobBoard Site Stats</h2>
-    <p class="lead text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita unde officiis recusandae sequi excepturi corrupti.</p>
+    <p class="lead text-white">Our ever increasing job postings and companies, be sure to check for new vacancies</p>
     </div>
 </div>
 <div class="row pb-0 block__19738 section-counter">
@@ -180,7 +180,7 @@
 <div class="row align-items-center">
     <div class="col-md-8">
     <h2 class="text-white">Looking For A Job?</h2>
-    <p class="mb-0 text-white lead">Lorem ipsum dolor sit amet consectetur adipisicing elit tempora adipisci impedit.</p>
+    <p class="mb-0 text-white lead">create an account and begin your job hunt</p>
     </div>
     <div class="col-md-3 ml-auto">
     <a href="#" class="btn btn-warning btn-block btn-lg">Sign Up</a>
@@ -198,7 +198,7 @@
     <div class="row justify-content-center">
         <div class="col-md-7">
         <h2 class="section-title mb-2">Companies We've Helped</h2>
-        <p class="lead">Porro error reiciendis commodi beatae omnis similique voluptate rerum ipsam fugit mollitia ipsum facilis expedita tempora suscipit iste</p>
+        <p class="lead">Only just a few of the companies that we've had job listings from</p>
         </div>
     </div>
     

@@ -112,7 +112,7 @@
             <p>&ldquo;Ipsum harum assumenda in eum vel eveniet numquam, cumque vero vitae enim cupiditate deserunt eligendi officia modi consectetur. Expedita tempora quos nobis earum hic ex asperiores quisquam optio nostrum sit&rdquo;</p>
             </blockquote>
             <div class="block__91147 d-flex align-items-center">
-            <figure class="mr-4"><img src="{{ asset('assets/images/person_2.jpg') }}" alt="Image" class="img-fluid"></figure>
+            <figure class="mr-4"><img src="{{ asset('assets/images/person_3.jpg') }}" alt="Image" class="img-fluid"></figure>
             <div>
                 <h3>Chris Peter</h3>
                 <span class="position">Web Designer</span>
